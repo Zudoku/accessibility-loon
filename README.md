@@ -34,7 +34,7 @@ Configuration
 
 AccessibilityLoon will start up automatically and you can configure it the following way:
 
-```
+```kotlin
 AccessibilityLoon.config = AccessibilityLoon.config
     .copy(
         useScreenshotsForAccessibilityChecks = false,
@@ -52,7 +52,7 @@ This library is available in [Jitpack](https://jitpack.io/#Zudoku/accessibility-
 
 ```kotlin
 dependencies {
-    debugImplementation 'com.github.Zudoku:accessibility-loon:main-SNAPSHOT'
+    debugImplementation 'com.github.Zudoku:accessibility-loon:0.1.0'
 }
 ```
 
