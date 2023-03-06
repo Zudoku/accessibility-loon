@@ -1,0 +1,1 @@
+-keep com.sirenartt.loon.startup.LoonStartupInitializer

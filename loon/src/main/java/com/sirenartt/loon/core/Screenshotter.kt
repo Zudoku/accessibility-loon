@@ -6,7 +6,6 @@ import android.graphics.Picture
 import android.graphics.Rect
 import android.os.Build
 import android.view.View
-import com.google.android.libraries.accessibility.utils.log.LogUtils
 
 
 internal class Screenshotter {
@@ -50,6 +49,7 @@ internal class Screenshotter {
             }
         }
 
+        @Suppress("DEPRECATION")
         private fun getScreenshotPreP(view: View): Bitmap {
             // The drawing cache is a cheap, easy and compatible way to generate our screenshot.
             // However, because the cache is capped at a maximum size, this method may not work

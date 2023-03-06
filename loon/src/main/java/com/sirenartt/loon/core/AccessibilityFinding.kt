@@ -16,7 +16,7 @@ data class AccessibilityFinding(
                 title = checkResult.getRawTitleMessage(Locale.ENGLISH),
                 description = checkResult.getRawMessage(Locale.ENGLISH),
                 target = getTarget(checkResult.element),
-                severity = checkResult.metadata.toString()
+                severity = checkResult.type.toString()
             )
         }
 
