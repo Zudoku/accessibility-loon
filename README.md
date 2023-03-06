@@ -14,7 +14,7 @@ The library works by monitoring the current Activity and periodically analyzing 
 
 If an accessibility issue is found, the issue will be reported to LogCat:
 
-![Reference](docs/image1.png)
+![Reference](docs/image1.jpg)
 
 ```
 W  --- [AccessibilityLoon] Found accessibility problem ---
