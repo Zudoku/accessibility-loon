@@ -1,1 +1,65 @@
-# accessibility-loon
+AccessibilityLoon
+========
+
+Accessibility testing library for Android.
+
+[![Release](https://jitpack.io/v/Zudoku/accessibility-loon.svg)](https://jitpack.io/#Zudoku/accessibility-loon)
+
+How AccessibilityLoon works
+--------
+
+AccessibilityLoon is a library built ontop of Googles [Accessibility-Test-Framework-for-Android](https://github.com/google/Accessibility-Test-Framework-for-Android).
+
+The library works by monitoring the current Activity and periodically analyzing the current view tree.
+
+If an accessibility issue is found, the issue will be reported to LogCat:
+
+![Reference](docs/image1.png)
+
+```
+W  --- [AccessibilityLoon] Found accessibility problem ---
+W  View: [resourceName=com.example.myapplication:id/title, id=7, class=com.google.android.material.textview.MaterialTextView]
+W  Severity: WARNING
+W  Problem: Text contrast
+W  Description: The item's text contrast ratio is 1.92. This ratio is based on an estimated foreground color of <tt>#444444</tt> and an estimated background color of <tt>#121212</tt>. Consider increasing this item's text contrast ratio to 4.50 or greater.
+W  -------------------------------------------------------
+```
+
+The library is intended to make it easy to spot accessibility issues while doing development and this library takes a lot of inspiration from LeakCanary.
+
+
+Configuration
+--------
+
+AccessibilityLoon will start up automatically and you can configure it the following way:
+
+```
+AccessibilityLoon.config = AccessibilityLoon.config
+    .copy(
+        useScreenshotsForAccessibilityChecks = false,
+        performCheckIntervalMs = TimeUnit.SECONDS.toMillis(15)
+    )
+```
+
+By default, the library will use screenshots of the view tree to figure out contrast issues. This can be turned off, but it will make the the detection of some accessibility issues impossible.
+
+Download
+--------
+
+This library is available in [Jitpack](https://jitpack.io/#Zudoku/accessibility-loon).
+
+
+```kotlin
+dependencies {
+    debugImplementation 'com.github.Zudoku:accessibility-loon:main-SNAPSHOT'
+}
+```
+
+Make sure that you have included Jitpack as a repository:
+
+```kotlin
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+```
+
