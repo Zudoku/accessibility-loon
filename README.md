@@ -1,4 +1,4 @@
-AccessibilityLoon
+AccessibilityLoon <img src="docs/logo.png" alt="Logo" width="88">
 ========
 
 Accessibility testing library for Android.
