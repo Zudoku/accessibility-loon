@@ -4,8 +4,10 @@ import android.app.Application
 import android.content.Context
 import android.util.Log
 import androidx.startup.Initializer
+import com.google.errorprone.annotations.Keep
 import com.sirenartt.loon.core.AccessibilityLoon
 
+@Keep
 @Suppress("unused")
 class LoonStartupInitializer : Initializer<LoonStartupInitializer> {
 

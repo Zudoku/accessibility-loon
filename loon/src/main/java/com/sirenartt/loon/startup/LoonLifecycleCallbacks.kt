@@ -4,10 +4,11 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import com.sirenartt.loon.core.AccessibilityLoon
 import java.lang.ref.WeakReference
 
-class LoonLifecycleCallbacks(): Application.ActivityLifecycleCallbacks {
+class LoonLifecycleCallbacks: Application.ActivityLifecycleCallbacks {
     override fun onActivityCreated(p0: Activity, p1: Bundle?) {}
     override fun onActivityStarted(p0: Activity) {}
     override fun onActivityStopped(p0: Activity) {}
@@ -17,7 +18,7 @@ class LoonLifecycleCallbacks(): Application.ActivityLifecycleCallbacks {
     private var currentActivity: WeakReference<Activity>? = null
 
     init {
-        val handler = Handler()
+        val handler = Handler(Looper.getMainLooper())
 
         handler.postDelayed(object : Runnable {
             override fun run() {
