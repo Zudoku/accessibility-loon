@@ -26,13 +26,17 @@ W  Description: The item's text contrast ratio is 1.92. This ratio is based on a
 W  -------------------------------------------------------
 ```
 
-The library is intended to make it easy to spot accessibility issues while doing development and this library takes a lot of inspiration from LeakCanary.
+The library is intended to make it easy to spot accessibility issues while doing development, instead of relying on Pre-launch report on Play Store or Firebase test lab. 
+
+**Note:** This library is intended to be run with the debug version of your app. If you are thinking about accessibility testing on UI tests, consider using [Accessibility-Test-Framework-for-Android](https://github.com/google/Accessibility-Test-Framework-for-Android) directly instead of this library.
+
+This library takes a lot of inspiration from LeakCanary.
 
 
 Configuration
 --------
 
-AccessibilityLoon will start up automatically and you can configure it the following way:
+AccessibilityLoon will start up automatically but if you need to customize the configuration, you can do it the following way:
 
 ```kotlin
 AccessibilityLoon.config = AccessibilityLoon.config
@@ -42,7 +46,7 @@ AccessibilityLoon.config = AccessibilityLoon.config
     )
 ```
 
-By default, the library will use screenshots of the view tree to figure out contrast issues. This can be turned off, but it will make the the detection of some accessibility issues impossible.
+By default, the library will screenshot the view tree to figure out contrast issues. This can be turned off, but it will make the the detection of some accessibility issues impossible.
 
 Download
 --------
