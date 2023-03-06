@@ -5,7 +5,7 @@ Accessibility testing library for Android.
 
 [![Release](https://jitpack.io/v/Zudoku/accessibility-loon.svg)](https://jitpack.io/#Zudoku/accessibility-loon)
 
-How AccessibilityLoon works
+How it works
 --------
 
 AccessibilityLoon is a library built ontop of Googles [Accessibility-Test-Framework-for-Android](https://github.com/google/Accessibility-Test-Framework-for-Android).
@@ -14,7 +14,8 @@ The library works by monitoring the current Activity and periodically analyzing 
 
 If an accessibility issue is found, the issue will be reported to LogCat:
 
-![Reference](docs/image1.jpg)
+
+<img src="docs/image1.jpg" alt="Reference" width="512">
 
 ```
 W  --- [AccessibilityLoon] Found accessibility problem ---
